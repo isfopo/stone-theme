@@ -3,6 +3,7 @@ import path from 'node:path'
 
 import { tokenColors } from './colors-tokens'
 import { workbenchColors } from './colors-workbench'
+import { gitColors } from './git'
 import { comment } from './languages/comment'
 import { csharp } from './languages/csharp'
 import { html } from './languages/html'
@@ -19,7 +20,10 @@ const theme = {
   name: 'Stone',
   colorSpaceName: 'sRGB',
   semanticClass: 'theme.dark.stone',
-  colors: workbenchColors,
+  colors: {
+    ...workbenchColors,
+    ...gitColors,
+  },
   tokenColors: [
     ...tokenColors,
     ...comment,
