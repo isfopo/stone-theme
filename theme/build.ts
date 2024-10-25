@@ -42,12 +42,16 @@ for (const [key, value] of Object.entries(theme.colors)) {
   if (value === null) delete theme.colors[key]
 }
 
-fs.mkdir(path.resolve(process.cwd(), 'dist'))
+const dist = path.resolve(process.cwd(), 'dist')
 
-// 🚀 Write to dist
-fs.writeFile(
-  path.resolve(process.cwd(), 'dist/stone.json'),
-  JSON.stringify(theme, null, 2),
-)
-  .then(() => console.log('Build finished'))
-  .catch((err) => console.warn(err))
+fs.rmdir(dist, {}).then(() => {
+  fs.mkdir(dist).then(() => {
+    // 🚀 Write to dist
+    fs.writeFile(
+      path.resolve(process.cwd(), 'dist/stone.json'),
+      JSON.stringify(theme, null, 2),
+    )
+      .then(() => console.log('Build finished'))
+      .catch((err) => console.warn(err))
+  })
+})
