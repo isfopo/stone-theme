@@ -1,4 +1,4 @@
-import { Colors, THEME, transparency } from '../colors'
+import { Colors, THEME } from '../colors'
 import { alpha, token } from '../utils'
 
 export const json = [
@@ -11,6 +11,6 @@ export const json = [
   // Punctuation (Object and Array)
   token(
     'source.json punctuation.separator, source.json punctuation.definition.dictionary, source.json punctuation.definition.array',
-    alpha(Colors.schemes[THEME].primary, transparency.INACTIVE),
+    alpha(Colors.schemes[THEME].primary, 0.9),
   ),
 ]
