@@ -44,14 +44,17 @@ for (const [key, value] of Object.entries(theme.colors)) {
 
 const dist = path.resolve(process.cwd(), 'dist')
 
-fs.rmdir(dist, {}).then(() => {
-  fs.mkdir(dist).then(() => {
-    // 🚀 Write to dist
-    fs.writeFile(
-      path.resolve(process.cwd(), 'dist/stone.json'),
-      JSON.stringify(theme, null, 2),
-    )
-      .then(() => console.log('Build finished'))
-      .catch((err) => console.warn(err))
-  })
-})
+const makeDist = async () => {
+  await fs.mkdir(dist)
+  await fs.writeFile(
+    path.resolve(process.cwd(), 'dist/stone.json'),
+    JSON.stringify(theme, null, 2),
+  )
+}
+
+try {
+  makeDist()
+} catch {
+  fs.rmdir(dist)
+  makeDist()
+}
