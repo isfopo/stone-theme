@@ -15,18 +15,18 @@ export const tokenColors = [
   // Booleans are constants (Uppercase "constants" are actually variables)
   token('constant', Colors.schemes[THEME].onPrimaryContainer),
   // Entities end up being a lot of things, most noticeably class names, method names
-  token('entity', Colors.schemes[THEME].secondary, 'bold'),
+  token('entity', Colors.schemes[THEME].primary, 'bold'),
   token('invalid', Colors.schemes[THEME].onErrorContainer, 'italic bold underline'),
   // Language keywords like `export` or `return`
   token('keyword', Colors.schemes[THEME].primary),
   // Generic for markup content
   token('markup', Colors.schemes[THEME].onSurface),
   // Includes variable declarations
-  token('storage', Colors.schemes[THEME].onSurface),
+  token('storage', Colors.schemes[THEME].primaryFixed),
   token('string', Colors.schemes[THEME].tertiary, 'italic'),
   // Support is meant to be things provided by external frameworks or libraries
   token('support', Colors.schemes[THEME].onSurface),
-  token('variable', Colors.schemes[THEME].onPrimaryContainer, 'bold'),
+  token('variable', Colors.schemes[THEME].tertiaryFixed, 'bold'),
   token('variable.other.constant', Colors.schemes[THEME].tertiary),
 
   // --- TYPES
