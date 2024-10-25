@@ -172,14 +172,14 @@ const listsTrees = {
   'list.focusBackground': alpha(Colors.schemes[THEME].secondary, 0.2),
   'list.focusForeground': Colors.schemes[THEME].tertiary,
   // Selected item when the list container is in focus
-  'list.activeSelectionBackground': alpha(Colors.schemes[THEME].secondary, 0.1),
-  'list.activeSelectionForeground': Colors.schemes[THEME].tertiary,
+  'list.activeSelectionBackground': alpha(Colors.schemes[THEME].primary, 0.3),
+  'list.activeSelectionForeground': Colors.schemes[THEME].onPrimaryContainer,
   // Selected item when the list container is NOT in focus. (Currently assuming
   // this really only applies to file explorer view, where having the last file
   // that was selected have a background is distracting, especially if you don't
   // have VSCode focus the file you're viewing when you change files)
-  'list.inactiveSelectionBackground': Colors.schemes[THEME].surfaceContainer,
-  'list.inactiveSelectionForeground': Colors.schemes[THEME].onSurface,
+  'list.inactiveSelectionBackground': alpha(Colors.schemes[THEME].tertiaryContainer, 0.4),
+  'list.inactiveSelectionForeground': Colors.schemes[THEME].onTertiaryContainer,
   // Focused item when the list container is NOT in focus
   'list.inactiveFocusBackground': null, // unknown
   // Drag and drop background, shows when you hover a drag item over a droppable area
