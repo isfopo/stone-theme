@@ -36,7 +36,7 @@ const BACKGROUND_DRAG_DROP = alpha(Colors.schemes[THEME].surfaceTint, transparen
 
 // --- Borders
 
-const BORDERS = '#0000'
+const BORDERS = TRANSPARENT
 
 // --- Highlighting
 
@@ -56,7 +56,7 @@ const MERGE_INCOMING = Colors.schemes[THEME].secondary
 const MERGE_COMMON = Colors.schemes[THEME].tertiary
 
 const GIT_ADDED = Colors.schemes[THEME].confirm
-const GIT_MODIFIED = Colors.schemes[THEME].onSecondaryContainer
+const GIT_MODIFIED = Colors.schemes[THEME].tertiary
 const GIT_DELETED = Colors.schemes[THEME].error
 const GIT_UNTRACKED = alpha(Colors.schemes[THEME].onSurface, transparency.DISABLED)
 const GIT_IGNORED = alpha(Colors.schemes[THEME].onSurface, transparency.DISABLED)
@@ -181,15 +181,15 @@ const progressBar = {
 const listsTrees = {
   // Mouse hover
   'list.hoverBackground': alpha(Colors.schemes[THEME].secondary, 0.05),
-  'list.hoverForeground': Colors.schemes[THEME].onSecondaryContainer,
+  'list.hoverForeground': Colors.schemes[THEME].tertiary,
   // Keyboard focus - using slightly higher alpha to make selection more obvious,
   // this helps UX for things like project and command dropdown selection with
   // the keyboard
   'list.focusBackground': alpha(Colors.schemes[THEME].secondary, 0.2),
-  'list.focusForeground': Colors.schemes[THEME].onSecondaryContainer,
+  'list.focusForeground': Colors.schemes[THEME].tertiary,
   // Selected item when the list container is in focus
   'list.activeSelectionBackground': alpha(Colors.schemes[THEME].secondary, 0.1),
-  'list.activeSelectionForeground': Colors.schemes[THEME].onSecondaryContainer,
+  'list.activeSelectionForeground': Colors.schemes[THEME].tertiary,
   // Selected item when the list container is NOT in focus. (Currently assuming
   // this really only applies to file explorer view, where having the last file
   // that was selected have a background is distracting, especially if you don't
@@ -204,7 +204,7 @@ const listsTrees = {
     transparency.DROP,
   ),
   // The text that matches a search term inside of lists
-  'list.highlightForeground': Colors.schemes[THEME].onSecondaryContainer,
+  'list.highlightForeground': Colors.schemes[THEME].tertiary,
   'list.errorForeground': ERROR,
   'list.warningForeground': WARNING,
   'list.invalidItemForeground': null,
@@ -424,7 +424,7 @@ const editor = {
 
 const brackets = {
   'editorBracketHighlight.foreground1': Colors.schemes[THEME].onPrimaryContainer,
-  'editorBracketHighlight.foreground2': Colors.schemes[THEME].onSecondaryContainer,
+  'editorBracketHighlight.foreground2': Colors.schemes[THEME].tertiary,
   'editorBracketHighlight.foreground3': Colors.schemes[THEME].onTertiaryContainer,
   'editorBracketHighlight.foreground4': Colors.schemes[THEME].onSurfaceVariant,
   'editorBracketMatch.background': alpha(
@@ -528,7 +528,7 @@ const activityBar = {
   ),
   'activityBar.activeBorder': Colors.schemes[THEME].secondary,
   // Badges
-  'activityBarBadge.background': Colors.schemes[THEME].onSecondaryContainer,
+  'activityBarBadge.background': Colors.schemes[THEME].tertiary,
   'activityBarBadge.foreground': Colors.schemes[THEME].secondaryContainer,
 }
 
@@ -576,7 +576,7 @@ const sideBar = {
 // Bar at bottom of application with current statuses and info
 const statusBar = {
   'statusBar.background': Colors.schemes[THEME].surfaceContainerLow,
-  'statusBar.foreground': Colors.schemes[THEME].onSecondaryContainer,
+  'statusBar.foreground': Colors.schemes[THEME].tertiary,
   'statusBar.border': TRANSPARENT,
   // DEBUGGING MODE
   'statusBar.debuggingBackground': Colors.schemes[THEME].secondary,
@@ -762,13 +762,13 @@ const terminal = {
   'terminal.selectionBackground': HIGHLIGHT_CURRENT_SELECTION,
 
   'terminalCursor.background': Colors.schemes[THEME].secondaryContainer,
-  'terminalCursor.foreground': Colors.schemes[THEME].onSecondaryContainer,
+  'terminalCursor.foreground': Colors.schemes[THEME].tertiary,
 
   'terminal.ansiBlack': Colors.schemes[THEME].surface,
   'terminal.ansiBrightBlack': Colors.schemes[THEME].surfaceBright,
 
   'terminal.ansiBlue': Colors.schemes[THEME].secondary,
-  'terminal.ansiBrightBlue': Colors.schemes[THEME].onSecondaryContainer,
+  'terminal.ansiBrightBlue': Colors.schemes[THEME].tertiary,
 
   'terminal.ansiMagenta': '#fa61b8',
   'terminal.ansiBrightMagenta': '#d5358f',
@@ -809,7 +809,7 @@ const gitLens = {
   ),
   'gitlens.gutterBackgroundColor': PRIMARY_BACKGROUND,
   'gitlens.gutterForegroundColor': Colors.schemes[THEME].onSurfaceVariant,
-  'gitlens.gutterUncommittedForegroundColor': Colors.schemes[THEME].onSecondaryContainer,
+  'gitlens.gutterUncommittedForegroundColor': Colors.schemes[THEME].tertiary,
 }
 
 export const workbenchColors = {
