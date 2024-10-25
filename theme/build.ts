@@ -42,6 +42,8 @@ for (const [key, value] of Object.entries(theme.colors)) {
   if (value === null) delete theme.colors[key]
 }
 
+fs.mkdir(path.resolve(process.cwd(), 'dist'))
+
 // 🚀 Write to dist
 fs.writeFile(
   path.resolve(process.cwd(), 'dist/stone.json'),
