@@ -48,7 +48,7 @@ for (const [key, value] of Object.entries(theme.colors)) {
 
 const dist = path.resolve(process.cwd(), 'dist')
 
-const makeDist = async () => {
+const write = async () => {
   try {
     await fs.mkdir(dist, { recursive: true })
     await fs.writeFile(
@@ -57,8 +57,8 @@ const makeDist = async () => {
     )
   } catch {
     fs.rmdir(dist)
-    makeDist()
+    write()
   }
 }
 
-makeDist()
+write()
