@@ -49,16 +49,16 @@ for (const [key, value] of Object.entries(theme.colors)) {
 const dist = path.resolve(process.cwd(), 'dist')
 
 const makeDist = async () => {
-  await fs.mkdir(dist)
-  await fs.writeFile(
-    path.resolve(process.cwd(), 'dist/stone.json'),
-    JSON.stringify(theme, null, 2),
-  )
+  try {
+    await fs.mkdir(dist, { recursive: true })
+    await fs.writeFile(
+      path.resolve(process.cwd(), 'dist/stone.json'),
+      JSON.stringify(theme, null, 2),
+    )
+  } catch {
+    fs.rmdir(dist)
+    makeDist()
+  }
 }
 
-try {
-  makeDist()
-} catch {
-  fs.rmdir(dist)
-  makeDist()
-}
+makeDist()
