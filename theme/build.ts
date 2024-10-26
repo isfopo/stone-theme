@@ -12,6 +12,7 @@ import { json } from './languages/json'
 import { markdown } from './languages/markdown'
 import { python } from './languages/python'
 import { react } from './languages/react'
+import { typescript } from './languages/typescript'
 import { yaml } from './languages/yaml'
 
 const theme = {
@@ -30,6 +31,7 @@ const theme = {
     ...csharp,
     ...html,
     ...javascript,
+    ...typescript,
     ...json,
     ...markdown,
     ...python,

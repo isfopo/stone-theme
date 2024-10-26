@@ -20,6 +20,8 @@ export const javascript = [
   // export keyword
   token('keyword.control.export', Colors.schemes[THEME].onTertiaryContainer),
 
+  token('meta.array.literal.ts', Colors.schemes[THEME].tertiaryContainer),
+
   // keywords import and from in: import someModule from 'some-module'
   token(
     'keyword.control.import, keyword.control.from',
