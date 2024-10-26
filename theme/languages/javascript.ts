@@ -8,9 +8,6 @@ export const javascript = [
   // Boolean values, eg: true
   token('constant.language.boolean', Colors.schemes[THEME].onTertiaryContainer),
 
-  // Null values, eg: null
-  token('constant.language.null', Colors.schemes[THEME].error),
-
   // --------------------------------------------------------
   // Keywords
 
@@ -18,9 +15,7 @@ export const javascript = [
   token('keyword.control.flow', Colors.schemes[THEME].onTertiaryContainer, 'bold'),
 
   // export keyword
-  token('keyword.control.export', Colors.schemes[THEME].onTertiaryContainer),
-
-  token('meta.array.literal.ts', Colors.schemes[THEME].tertiaryContainer),
+  token('keyword.control.export', Colors.schemes[THEME].tertiary, 'italic bold'),
 
   // keywords import and from in: import someModule from 'some-module'
   token(
