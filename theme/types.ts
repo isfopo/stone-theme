@@ -39,9 +39,6 @@ export interface Palettes {
 }
 
 export interface Schemes {
-  light: Scheme
-  'light-medium-contrast': Scheme
-  'light-high-contrast': Scheme
   dark: Scheme
   'dark-medium-contrast': Scheme
   'dark-high-contrast': Scheme
