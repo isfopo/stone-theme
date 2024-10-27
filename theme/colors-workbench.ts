@@ -499,8 +499,8 @@ const activityBar = {
   ),
   'activityBar.activeBorder': Colors.schemes[THEME].secondary,
   // Badges
-  'activityBarBadge.background': Colors.schemes[THEME].tertiary,
-  'activityBarBadge.foreground': Colors.schemes[THEME].secondaryContainer,
+  'activityBarBadge.background': Colors.schemes[THEME].surfaceContainerLowest,
+  'activityBarBadge.foreground': Colors.schemes[THEME].primaryFixed,
 }
 
 //
@@ -538,6 +538,10 @@ const sideBar = {
   'sideBarSectionHeader.foreground': Colors.schemes[THEME].onSurface,
   'sideBarSectionHeader.border': TRANSPARENT,
   'sideBarStickyScroll.border': TRANSPARENT,
+  // Badges
+  'sideBarBadge.background': Colors.schemes[THEME].surfaceContainerLowest,
+  'sideBarBadge.foreground': Colors.schemes[THEME].onSurface,
+  'sideBarBadge.border': Colors.schemes[THEME].onSurface,
 }
 
 //
